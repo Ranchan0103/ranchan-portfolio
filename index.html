@@ -5,17 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ranchan | AIツール開発</title>
 <meta name="description" content="RanchanはAIを活用した業務効率化ツールを開発する個人事業主です。建設業界向けAIツール群「genba-ai-tools」、文章生成AIツール群「ai-business-tools」を開発しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="grain" aria-hidden="true"></div>
+<div class="top-line" aria-hidden="true"></div>
+
 <header class="site-header">
   <div class="container header-inner">
-    <a href="#top" class="logo">Ranchan<span class="logo-dot">.</span></a>
+    <a href="#top" class="logo">
+      <span class="logo-mark">R</span>
+      <span class="logo-text">Ranchan</span>
+    </a>
     <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#works">Works</a>
-      <a href="#contact">Contact</a>
+      <a href="#about"><span class="nav-num">01</span>About</a>
+      <a href="#works"><span class="nav-num">02</span>Works</a>
+      <a href="#contact"><span class="nav-num">03</span>Contact</a>
     </nav>
   </div>
 </header>
@@ -23,88 +32,93 @@
 <main>
 
   <section id="top" class="hero">
-    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-bg" aria-hidden="true">
+      <span class="orb orb-a"></span>
+      <span class="orb orb-b"></span>
+    </div>
+
     <div class="container hero-inner">
-      <p class="overline">AI TOOL DEVELOPER</p>
-      <h1 class="hero-name">Ranchan</h1>
-      <p class="hero-role">AIツール開発 / 個人事業主</p>
-      <p class="hero-lead">AIを活用した業務効率化ツールの開発を行っています。</p>
-      <div class="hero-actions">
-        <a href="#works" class="btn btn-primary">実績を見る</a>
-        <a href="#contact" class="btn btn-outline">お問い合わせ</a>
+      <p class="overline"><span class="overline-bar"></span>AI TOOL DEVELOPER</p>
+
+      <h1 class="hero-name">
+        <span class="hero-name-en">Ranchan</span>
+      </h1>
+
+      <div class="hero-meta">
+        <p class="hero-role">AIツール開発<span class="slash">/</span>個人事業主</p>
+        <p class="hero-lead">AIを活用した業務効率化ツールの開発を行っています。</p>
       </div>
+
+      <div class="hero-actions">
+        <a href="#works" class="btn-ghost">実績を見る</a>
+        <a href="#contact" class="link-arrow">お問い合わせ<span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span class="scroll-line"></span>
+      <span class="scroll-text">SCROLL</span>
     </div>
   </section>
 
   <section id="about" class="section">
-    <div class="container">
-      <p class="section-label">01 / About</p>
-      <h2 class="section-title">自己紹介</h2>
-      <p class="about-text">
-        Ranchanは、AIを活用した業務効率化ツールの開発を行う個人事業主です。
-        建設・建築業界向けの現場業務支援ツールや、文章作成・資料作成を効率化する
-        ビジネスツールなど、日々の「面倒な作業」をAIの力でシンプルにすることを
-        目指して開発しています。
-      </p>
+    <span class="section-num" aria-hidden="true">01</span>
+    <div class="container about-grid">
+      <div class="about-head">
+        <p class="section-label">About</p>
+        <h2 class="section-title">自己紹介</h2>
+      </div>
+      <p class="about-text">Ranchanは、AIを活用した業務効率化ツールの開発を行う個人事業主です。建設・建築業界向けの現場業務支援ツールや、文章作成・資料作成を効率化するビジネスツールなど、日々の「面倒な作業」をAIの力でシンプルにすることを目指して開発しています。</p>
     </div>
   </section>
 
-  <section id="works" class="section section-alt">
+  <section id="works" class="section">
+    <span class="section-num" aria-hidden="true">02</span>
     <div class="container">
-      <p class="section-label">02 / Works</p>
+      <p class="section-label">Works</p>
       <h2 class="section-title">実績・プロジェクト</h2>
 
-      <div class="works-grid">
+      <div class="work-list">
 
-        <article class="work-card">
-          <div class="work-card-head">
-            <p class="work-index">PROJECT 01</p>
-            <span class="badge badge-progress"><span class="badge-dot"></span>開発中</span>
+        <article class="work-row">
+          <p class="work-row-index">01</p>
+          <div class="work-row-body">
+            <div class="work-row-heading">
+              <h3 class="work-title">genba-ai-tools</h3>
+              <span class="status status-progress">
+                <span class="status-dot"></span>開発中
+              </span>
+            </div>
+            <p class="work-desc">建設・建築業界向けのAI業務効率化ツール群です。施工日報や現場会議の議事録を自動で要約・整形するなど、現場の書類作成にかかる時間を削減することを目指しています。</p>
+            <p class="work-tags">建設・建築<span>/</span>現場DX<span>/</span>日報・議事録自動化</p>
           </div>
-          <h3 class="work-title">genba-ai-tools</h3>
-          <p class="work-desc">
-            建設・建築業界向けのAI業務効率化ツール群です。施工日報や現場会議の
-            議事録を自動で要約・整形するなど、現場の書類作成にかかる時間を
-            削減することを目指しています。
-          </p>
-          <ul class="work-tags">
-            <li>建設・建築</li>
-            <li>現場DX</li>
-            <li>日報・議事録自動化</li>
-          </ul>
         </article>
 
-        <article class="work-card">
-          <div class="work-card-head">
-            <p class="work-index">PROJECT 02</p>
+        <article class="work-row">
+          <p class="work-row-index">02</p>
+          <div class="work-row-body">
+            <div class="work-row-heading">
+              <h3 class="work-title">ai-business-tools</h3>
+            </div>
+            <p class="work-desc">note記事生成・SNS投稿生成・提案書生成・議事録要約など、日々の文章作成業務を効率化するAIツール群です。</p>
+            <p class="work-tags">note記事生成<span>/</span>SNS投稿生成<span>/</span>提案書生成<span>/</span>議事録要約</p>
           </div>
-          <h3 class="work-title">ai-business-tools</h3>
-          <p class="work-desc">
-            note記事生成・SNS投稿生成・提案書生成・議事録要約など、日々の
-            文章作成業務を効率化するAIツール群です。
-          </p>
-          <ul class="work-tags">
-            <li>note記事生成</li>
-            <li>SNS投稿生成</li>
-            <li>提案書生成</li>
-            <li>議事録要約</li>
-          </ul>
         </article>
 
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section">
+  <section id="contact" class="section section-contact">
+    <span class="section-num" aria-hidden="true">03</span>
     <div class="container">
-      <p class="section-label">03 / Contact</p>
-      <h2 class="section-title">お問い合わせ</h2>
-      <p class="contact-lead">
-        業務効率化ツールの開発・カスタマイズのご相談は、以下よりお願いいたします。
-      </p>
-      <!-- TODO: ランサーズ / ココナラのプロフィールリンクをここに設定してください -->
-      <a href="#" class="btn btn-primary btn-disabled" aria-disabled="true">
-        お問い合わせ(準備中)
+      <p class="section-label">Contact</p>
+      <p class="contact-lead">業務効率化ツールの開発・カスタマイズのご相談は、こちらから。</p>
+      <p class="coming-soon">Coming soon</p>
+      <!-- TODO: ランサーズ / ココナラのプロフィールリンクが決まったら、
+           このa要素にhrefを設定し、class="contact-cta"のみに変更してください -->
+      <a href="#" class="contact-cta is-disabled" aria-disabled="true" tabindex="-1">
+        <span>お問い合わせ</span><span class="arrow">→</span>
       </a>
       <p class="contact-note">※ お問い合わせ先のリンクは近日公開予定です。</p>
     </div>
@@ -115,6 +129,7 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <span>&copy; 2026 Ranchan</span>
+    <a href="#top" class="back-to-top">Back to top<span class="arrow">↑</span></a>
   </div>
 </footer>
 
