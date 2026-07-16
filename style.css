@@ -118,6 +118,45 @@ ul, ol {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
+/* ---------- Starfield (variant A: sitewide subtle twinkle) ---------- */
+
+.starfield {
+  position: fixed;
+  inset: 0;
+  z-index: 250;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0.5;
+  background-repeat: repeat;
+  background-image:
+    radial-gradient(1.4px 1.4px at 20px 30px, rgba(94, 234, 255, 0.55), transparent),
+    radial-gradient(1px 1px at 90px 120px, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1.4px 1.4px at 160px 60px, rgba(94, 234, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 210px 170px, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1.4px 1.4px at 260px 20px, rgba(94, 234, 255, 0.45), transparent);
+  background-size: 320px 280px;
+  animation: twinkle 8s ease-in-out infinite alternate;
+}
+
+.starfield::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: repeat;
+  background-image:
+    radial-gradient(1px 1px at 60px 200px, rgba(255, 255, 255, 0.35), transparent),
+    radial-gradient(1.3px 1.3px at 140px 40px, rgba(94, 234, 255, 0.35), transparent),
+    radial-gradient(1px 1px at 280px 140px, rgba(255, 255, 255, 0.3), transparent);
+  background-size: 340px 300px;
+  animation: twinkle 11s ease-in-out infinite alternate;
+  animation-delay: -3.5s;
+}
+
+@keyframes twinkle {
+  from { opacity: 0.25; }
+  to { opacity: 0.6; }
+}
+
 /* ---------- Header ---------- */
 
 .site-header {
@@ -255,9 +294,34 @@ ul, ol {
   animation-delay: -10s, -4s;
 }
 
+.orb-c {
+  width: 420px;
+  height: 420px;
+  top: 20%;
+  left: 38%;
+  background: radial-gradient(circle, rgba(122, 140, 255, 0.09), transparent 70%);
+  animation: drift-alt 30s var(--ease) infinite alternate, pulse 12s ease-in-out infinite;
+  animation-delay: -6s, -2s;
+}
+
+.orb-d {
+  width: 360px;
+  height: 360px;
+  bottom: 6%;
+  left: -6%;
+  background: radial-gradient(circle, rgba(227, 174, 114, 0.05), transparent 70%);
+  animation: drift-alt 24s var(--ease) infinite alternate, pulse 10s ease-in-out infinite;
+  animation-delay: -14s, -7s;
+}
+
 @keyframes drift {
   from { transform: translate(0, 0) scale(1); }
   to { transform: translate(24px, 30px) scale(1.06); }
+}
+
+@keyframes drift-alt {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(-28px, -22px) scale(1.08); }
 }
 
 @keyframes pulse {
@@ -768,6 +832,30 @@ ul, ol {
 
 .section-story {
   background: linear-gradient(180deg, transparent, rgba(227, 174, 114, 0.02) 50%, transparent);
+}
+
+.section-story > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.story-wave {
+  position: absolute;
+  top: 8%;
+  left: -12%;
+  width: 130%;
+  height: 240px;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(100deg, transparent 0%, rgba(94, 234, 255, 0.05) 35%, rgba(94, 234, 255, 0.11) 50%, rgba(94, 234, 255, 0.05) 65%, transparent 100%);
+  filter: blur(40px);
+  animation: wave-drift 17s ease-in-out infinite alternate;
+}
+
+@keyframes wave-drift {
+  0% { transform: translate(-4%, 0) rotate(-2deg); }
+  50% { transform: translate(2%, 34px) rotate(1deg); }
+  100% { transform: translate(-2%, -18px) rotate(-1.5deg); }
 }
 
 .story-list {
@@ -1358,6 +1446,16 @@ ul, ol {
   }
 
   .orb {
+    animation: none;
+  }
+
+  .starfield,
+  .starfield::after {
+    animation: none;
+    opacity: 0.35;
+  }
+
+  .story-wave {
     animation: none;
   }
 
