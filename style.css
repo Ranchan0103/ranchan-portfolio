@@ -724,16 +724,292 @@ ul, ol {
   max-width: 66ch;
 }
 
+/* ---------- FAQ ---------- */
+
+.faq-list {
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-top: 1px solid var(--line);
+}
+
+.faq-list .faq-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-item summary {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 26px 34px 26px 0;
+  cursor: pointer;
+  list-style: none;
+  transition: color 0.3s var(--ease);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--accent);
+  transition: transform 0.35s var(--ease);
+}
+
+.faq-item[open] summary::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-item summary:hover {
+  color: var(--accent-strong);
+}
+
+.faq-q {
+  font-size: 1.02rem;
+  font-weight: 500;
+  color: inherit;
+}
+
+.faq-a {
+  padding: 0 60px 30px 0;
+  font-size: 0.96rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  max-width: 62ch;
+}
+
+/* ---------- Voices (testimonials placeholder) ---------- */
+
+.voice-grid {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.voice-item {
+  position: relative;
+  padding: 32px;
+  border: 1px dashed var(--line-strong);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.voice-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--line-strong);
+}
+
+.voice-bar {
+  display: block;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--line-strong);
+  opacity: 0.6;
+}
+
+.voice-bar-name {
+  width: 40%;
+  margin-top: 6px;
+}
+
+.voice-bar-short {
+  width: 65%;
+}
+
+.voice-soon {
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+}
+
+/* ---------- Contact ---------- */
+
+.contact-grid {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.contact-card {
+  padding: 36px;
+  border: 1px solid var(--line-strong);
+  border-radius: 20px;
+  background: var(--bg-elevated);
+  transition: border-color 0.4s var(--ease), transform 0.4s var(--ease), background 0.4s var(--ease);
+}
+
+.contact-card:not(.is-disabled):hover {
+  border-color: var(--accent-dim);
+  background: linear-gradient(160deg, var(--accent-soft), var(--bg-elevated) 60%);
+  transform: translateY(-2px);
+}
+
+.contact-card.is-disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.contact-card-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.contact-card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.tag-soon {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  color: var(--warn);
+  background: var(--warn-soft);
+  border: 1px solid rgba(227, 174, 114, 0.25);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+.contact-card-text {
+  font-size: 0.94rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+  max-width: 40ch;
+}
+
+.contact-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.sns-row {
+  margin-top: 72px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.sns-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.sns-links {
+  display: flex;
+  gap: 16px;
+}
+
+.sns-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 500;
+  transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.sns-link:hover {
+  border-color: var(--accent-dim);
+  color: var(--accent);
+}
+
+.sns-handle {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
-  padding: 44px 0;
+  padding: 80px 0 32px;
+  border-top: 1px solid var(--line);
 }
 
-.footer-inner {
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 56px;
+}
+
+.footer-brand .logo {
+  margin-bottom: 16px;
+}
+
+.footer-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  max-width: 32ch;
+}
+
+.footer-sitemap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-sitemap a,
+.footer-sns a {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  transition: color 0.3s var(--ease);
+}
+
+.footer-sitemap a:hover,
+.footer-sns a:hover {
+  color: var(--accent);
+}
+
+.footer-sns {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.footer-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
   font-family: var(--font-mono);
   font-size: 0.78rem;
   color: var(--text-muted);
@@ -805,6 +1081,23 @@ ul, ol {
   .work-feature-list {
     grid-template-columns: 1fr;
   }
+
+  .voice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+    margin-bottom: 8px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -872,7 +1165,30 @@ ul, ol {
     border-radius: 16px;
   }
 
-  .footer-inner {
+  .faq-item summary {
+    padding-right: 30px;
+  }
+
+  .faq-a {
+    padding-right: 30px;
+  }
+
+  .sns-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-brand {
+    grid-column: span 1;
+  }
+
+  .footer-bottom {
     flex-direction: column;
     gap: 14px;
     align-items: flex-start;
