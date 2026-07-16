@@ -10,8 +10,8 @@
   --line-strong: rgba(255, 255, 255, 0.11);
 
   --text-primary: #f3f5f8;
-  --text-secondary: #99a2b2;
-  --text-muted: #565f6f;
+  --text-secondary: #aab2c0;
+  --text-muted: #7b8494;
 
   --accent: #5eeaff;
   --accent-strong: #8ff4ff;
@@ -46,6 +46,7 @@ body {
   line-height: 1.9;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  text-shadow: 0 1px 3px rgba(6, 7, 10, 0.7), 0 0 16px rgba(6, 7, 10, 0.5);
 }
 
 .container {
@@ -339,7 +340,7 @@ ul, ol {
   letter-spacing: -0.02em;
   line-height: 1;
   color: var(--text-primary);
-  text-shadow: 0 0 50px rgba(94, 234, 255, 0.12);
+  text-shadow: 0 0 50px rgba(94, 234, 255, 0.12), 0 1px 3px rgba(6, 7, 10, 0.7), 0 0 16px rgba(6, 7, 10, 0.5);
 }
 
 .hero-copy {
@@ -879,7 +880,7 @@ ul, ol {
 .story-stat-after {
   font-size: 1.8rem;
   color: var(--accent);
-  text-shadow: 0 0 22px rgba(94, 234, 255, 0.3);
+  text-shadow: 0 0 22px rgba(94, 234, 255, 0.3), 0 1px 3px rgba(6, 7, 10, 0.7), 0 0 16px rgba(6, 7, 10, 0.5);
 }
 
 .story-stat-unit {
