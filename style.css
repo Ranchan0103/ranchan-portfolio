@@ -126,20 +126,20 @@ ul, ol {
   z-index: 260;
   pointer-events: none;
   mix-blend-mode: screen;
-  opacity: 0.6;
+  opacity: 0.85;
   background-image:
-    radial-gradient(circle at 20% 20%, rgba(94, 234, 255, 0.12), transparent 45%),
-    radial-gradient(circle at 80% 30%, rgba(122, 140, 255, 0.08), transparent 45%),
-    radial-gradient(circle at 50% 85%, rgba(94, 234, 255, 0.07), transparent 50%),
-    radial-gradient(circle at 88% 90%, rgba(227, 174, 114, 0.05), transparent 45%);
+    radial-gradient(circle at 20% 20%, rgba(94, 234, 255, 0.2), transparent 55%),
+    radial-gradient(circle at 80% 30%, rgba(122, 140, 255, 0.14), transparent 55%),
+    radial-gradient(circle at 50% 85%, rgba(94, 234, 255, 0.12), transparent 60%),
+    radial-gradient(circle at 88% 90%, rgba(227, 174, 114, 0.09), transparent 55%);
   background-size: 200% 200%;
-  animation: mesh-shift 36s ease-in-out infinite alternate;
+  animation: mesh-shift 26s ease-in-out infinite alternate;
 }
 
 @keyframes mesh-shift {
   0% { background-position: 0% 0%, 100% 0%, 50% 100%, 100% 100%; }
-  50% { background-position: 15% 22%, 82% 18%, 42% 88%, 92% 78%; }
-  100% { background-position: 6% 12%, 90% 8%, 55% 92%, 96% 88%; }
+  50% { background-position: 22% 30%, 74% 14%, 34% 82%, 86% 70%; }
+  100% { background-position: 8% 16%, 92% 6%, 58% 94%, 98% 92%; }
 }
 
 /* ---------- Header ---------- */
